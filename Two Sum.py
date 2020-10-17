@@ -13,3 +13,12 @@ class Solution(object):
             if target - nums[i] in nums[i + 1:]:
                 nums_copy[i] = '-'
                 return [i, nums_copy.index(target - nums[i])]
+
+# a bit more beautiful solution
+# class Solution(object):
+#     def twoSum(self, nums, target):
+#         for i in range(len(nums)):
+#             value = target - nums[i]
+#             for j in range(i + 1, len(nums)):
+#                 if nums[j] == value:
+#                     return [i, j]
